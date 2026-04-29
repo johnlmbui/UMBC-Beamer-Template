@@ -1,0 +1,131 @@
+\documentclass[10pt]{beamer}
+
+\mode<presentation>{
+	\usetheme{metropolis}
+	
+%	\definecolor{umbc-font-color}{HTML}{e5a009}
+	\setbeamerfont{title}{series=\bfseries,parent=structure}
+	\setbeamercolor{frametitle}{fg=white}
+	\setbeamercolor*{palette primary}{use=structure,fg=red}
+	\setbeamercolor*{palette secondary}{use=structure,fg=red}
+	\setbeamercolor*{palette tertiary}{use=structure,fg=red}
+	\setbeamerfont{frametitle}{size=\Large}
+	\setbeamercolor{background canvas}{bg=white}
+
+}
+\usepackage{caption,tabularx,colortbl}
+\usepackage{appendixnumberbeamer}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{xspace}
+\usepackage{tikz}
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif} % default family is serif
+
+\usepackage{fontspec}
+\setmainfont{Candara}
+
+\usepackage{makecell}
+
+\newcommand{\argmin}{\arg\!\min}
+\newcommand{\argmax}{\arg\!\max}
+
+
+
+\definecolor{umbcgold}{RGB}{255, 204, 0}
+\definecolor{umbcgoldshadow}{RGB}{255, 249, 230}
+
+\usepackage{lipsum}
+
+\newcommand\Wider[2][3em]{%
+	\makebox[\linewidth][c]{%
+		\begin{minipage}{\dimexpr\textwidth+#1\relax}
+			\raggedright#2
+		\end{minipage}%
+	}%
+}
+
+
+\usetikzlibrary{positioning}
+
+\makeatletter
+
+
+\addtobeamertemplate{frametitle}{\nointerlineskip%
+	\vbox to \z@{\hbox to \z@{\hskip-\beamer@leftmargin%
+			\includegraphics[width=\paperwidth]{frametitle-logo}\hss}\vss}}
+
+% Use image frametitle if you want a header without the logo
+
+\makeatother
+
+\addtobeamertemplate{title}{\vspace{0.1in}}{}
+\addtobeamertemplate{subtitle}{}{\vspace{-0.1in}}
+\addtobeamertemplate{author}{\vspace{-0.2in}}{}
+
+
+\begin{document}
+	
+	\title{Title of the presentation}
+	\subtitle{Subtitle}
+	\date{}
+
+	\author{John Doe}
+		\institute{University of Maryland Baltimore County}
+		
+	\titlegraphic{\hfill\includegraphics[height=1.1in]{umbc-logo}}	
+		
+	\begin{frame}
+		\maketitle
+		
+		% Uncomment this if you want to place other logos (Lab, Department, Group etc.)
+%		\begin{tikzpicture}[overlay, remember picture]
+%			\node[above right=0.7cm and .8cm of current page.south west] {\includegraphics[width=3cm]{example-image}};
+%%				\node[above =1cm of current page.south] {\includegraphics[width=3cm]{mpsc_transparent}};
+%			\node[above left=0.5cm and 5 cm of current page.south east] {\includegraphics[width=1.3cm]{example-image}};
+%		\end{tikzpicture}
+	\end{frame}
+
+
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents
+\end{frame}
+{
+	%This is for the block color to match umbc gold
+	\setbeamercolor{block title}{use=structure,fg=black,bg=umbcgold}
+	\setbeamercolor{block body}{use=structure,fg=black,bg=umbcgoldshadow}
+
+\section{Introduction}
+
+
+
+
+
+\begin{frame}{Slide Title}
+	%Use the Wider command if you need wide slide
+	\Wider[5em]{
+}
+
+\end{frame}
+
+
+}
+
+
+\appendix
+
+
+\begin{frame}[allowframebreaks]{References}
+
+%  \bibliography{bibliography}
+%  \bibliographystyle{abbrv}
+
+\end{frame}
+
+
+\end{document}
